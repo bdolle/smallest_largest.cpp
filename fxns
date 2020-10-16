@@ -1,0 +1,157 @@
+// template for smallest_largest.cpp
+
+// #include<iostream>
+
+double largest_double(){
+int exp = 11; //number of bits of exp
+int mant = 52; //number of bits for mantissa
+double my_two = 2.0; //ensure 2 is a dub
+
+// Calculating zi, per equation
+int zi=1;
+for(int i=0; i<(exp-1); i++){
+  zi = zi*2;
+}
+
+// Calculating phi, per equation
+double phi = 1;
+for(int i=0; i<zi-1; i++){
+  phi = phi * 2;
+}
+
+// Calculating sigma, per equation
+double sigma = 1;
+for(int i=0; i<mant; i++){
+  sigma = sigma / 2;
+}
+
+double number;
+number = phi * (my_two-sigma);
+
+// std::cout << "Exp is " << exp << "\n";
+// std::cout << "Two is " << my_two << "\n";
+// std::cout << "Zi is " << zi << "\n";
+// std::cout << "phi is" << phi << "\n";
+// std::cout << "Sigma is " << sigma << "\n";
+// std::cout << "Number is" << number << "\n";
+
+return number;
+}
+
+double smallest_double(){
+int exp = 11; //number of bits of exp
+int mant = 52; //number of bits for mantissa
+double my_two = 2.0; //ensure 2 is a dub
+
+// Calculating zi, per equation
+int zi=1;
+for(int i=0; i<(exp-1); i++){
+  zi = zi*2;
+}
+
+// Calculating phi, per equation
+double phi = 1;
+for(int i=0; i<zi-2; i++){
+  phi = phi / 2;
+}
+
+// Calculating sigma, per equation
+double sigma = 1;
+for(int i=0; i<mant; i++){
+  sigma = sigma / 2;
+}
+
+double number;
+number = phi * sigma;
+
+// std::cout << "Exp is " << exp << "\n";
+// std::cout << "Two is " << my_two << "\n";
+// std::cout << "Zi is " << zi << "\n";
+// std::cout << "phi is" << phi << "\n";
+// std::cout << "Sigma is " << sigma << "\n";
+// std::cout << "Number is" << number << "\n";
+
+return number;
+}
+  
+float largest_single(){
+int exp = 8; //number of bits of exp
+int mant = 23; //number of bits for mantissa
+float my_two = 2.0; //ensure 2 is a dub
+
+// Calculating zi, per equation
+int zi=1;
+for(int i=0; i<(exp-1); i++){
+  zi = zi*2;
+}
+
+// Calculating phi, per equation
+float phi = 1;
+for(int i=0; i<zi-1; i++){
+  phi = phi * 2;
+}
+
+// Calculating sigma, per equation
+float sigma = 1;
+for(int i=0; i<mant; i++){
+  sigma = sigma / 2;
+}
+
+float number;
+number = phi * (my_two-sigma);
+
+// std::cout << "Exp is " << exp << "\n";
+// std::cout << "Two is " << my_two << "\n";
+// std::cout << "Zi is " << zi << "\n";
+// std::cout << "phi is" << phi << "\n";
+// std::cout << "Sigma is " << sigma << "\n";
+// std::cout << "Number is" << number << "\n";
+
+return number;
+}
+
+float smallest_single(){
+int exp = 8; //number of bits of exp
+int mant = 23; //number of bits for mantissa
+float my_two = 2.0; //ensure 2 is a dub
+
+// Calculating zi, per equation
+int zi=1;
+for(int i=0; i<(exp-1); i++){
+  zi = zi*2;
+}
+
+// Calculating phi, per equation
+float phi = 1;
+for(int i=0; i<zi-2; i++){
+  phi = phi / 2;
+}
+
+// Calculating sigma, per equation
+float sigma = 1;
+for(int i=0; i<mant; i++){
+  sigma = sigma / 2;
+}
+
+float number;
+number = phi * sigma;
+
+// std::cout << "Exp is " << exp << "\n";
+// std::cout << "Two is " << my_two << "\n";
+// std::cout << "Zi is " << zi << "\n";
+// std::cout << "phi is" << phi << "\n";
+// std::cout << "Sigma is " << sigma << "\n";
+// std::cout << "Number is " << number << "\n";
+
+return number;
+
+}
+
+// int main(){
+//  largest_single();
+//  largest_double();
+//  smallest_single();
+//  smallest_double();
+//}
+
+
